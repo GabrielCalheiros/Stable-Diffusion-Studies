@@ -1,0 +1,223 @@
+<html>
+  <head><title>Stable Diffusion Experiments</title></head>
+    <body>
+        <Style>
+            body{
+                background-color: black;
+                color: white;
+                text-align: center;
+                font-family: monospace;
+            }
+            div{
+                border: solid;
+                border-color: white;
+                border-width: thin;
+            }
+.two_sided_table {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0% 0%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "guidance-1-prompt-01 guidance-1-prompt-20 guidance-1-prompt-40 guidance-1-prompt-60 guidance-1-prompt-80 guidance-1-prompt-99"
+    "guidance-10 guidance-10-prompt-20 guidance-10-prompt-40 guidance-10-prompt-60 guidance-10-prompt-80 guidance-10-prompt-99"
+    "guidance-20 guidance-20-prompt-20 guidance-20-prompt-40 guidance-20-prompt-60 guidance-20-prompt-80 guidance-20-prompt-99"
+    "guidance-30 guidance-30-prompt-20 guidance-30-prompt-40 guidance-30-prompt-60 guidance-30-prompt-80 guidance-30-prompt-99"
+    "guidance-40 guidance-40-prompt-20 guidance-40-prompt-40 guidance-40-prompt-60 guidance-40-prompt-80 guidance-40-prompt-99"
+    "guidance-50 guidance-50-prompt-20 guidance-50-prompt-40 guidance-50-prompt-60 guidance-50-prompt-80 guidance-50-prompt-99";
+    width: 70%;
+    margin-left: 15%;
+}
+
+.guidance-1-prompt-01 { grid-area: guidance-1-prompt-01; }
+
+.guidance-50 { grid-area: guidance-50; }
+
+.guidance-10 { grid-area: guidance-10; }
+
+.guidance-20 { grid-area: guidance-20; }
+
+.guidance-30 { grid-area: guidance-30; }
+
+.guidance-40 { grid-area: guidance-40; }
+
+.guidance-1-prompt-99 { grid-area: guidance-1-prompt-99; }
+
+.guidance-10-prompt-99 { grid-area: guidance-10-prompt-99; }
+
+.guidance-20-prompt-99 { grid-area: guidance-20-prompt-99; }
+
+.guidance-30-prompt-99 { grid-area: guidance-30-prompt-99; }
+
+.guidance-40-prompt-99 { grid-area: guidance-40-prompt-99; }
+
+.guidance-50-prompt-99 { grid-area: guidance-50-prompt-99; }
+
+.guidance-1-prompt-20 { grid-area: guidance-1-prompt-20; }
+
+.guidance-1-prompt-40 { grid-area: guidance-1-prompt-40; }
+
+.guidance-1-prompt-60 { grid-area: guidance-1-prompt-60; }
+
+.guidance-1-prompt-80 { grid-area: guidance-1-prompt-80; }
+
+.guidance-10-prompt-80 { grid-area: guidance-10-prompt-80; }
+
+.guidance-20-prompt-80 { grid-area: guidance-20-prompt-80; }
+
+.guidance-30-prompt-80 { grid-area: guidance-30-prompt-80; }
+
+.guidance-40-prompt-80 { grid-area: guidance-40-prompt-80; }
+
+.guidance-50-prompt-80 { grid-area: guidance-50-prompt-80; }
+
+.guidance-10-prompt-60 { grid-area: guidance-10-prompt-60; }
+
+.guidance-20-prompt-60 { grid-area: guidance-20-prompt-60; }
+
+.guidance-30-prompt-60 { grid-area: guidance-30-prompt-60; }
+
+.guidance-40-prompt-60 { grid-area: guidance-40-prompt-60; }
+
+.guidance-50-prompt-60 { grid-area: guidance-50-prompt-60; }
+
+.guidance-10-prompt-40 { grid-area: guidance-10-prompt-40; }
+
+.guidance-20-prompt-40 { grid-area: guidance-20-prompt-40; }
+
+.guidance-30-prompt-40 { grid-area: guidance-30-prompt-40; }
+
+.guidance-40-prompt-40 { grid-area: guidance-40-prompt-40; }
+
+.guidance-50-prompt-40 { grid-area: guidance-50-prompt-40; }
+
+.guidance-10-prompt-20 { grid-area: guidance-10-prompt-20; }
+
+.guidance-20-prompt-20 { grid-area: guidance-20-prompt-20; }
+
+.guidance-30-prompt-20 { grid-area: guidance-30-prompt-20; }
+
+.guidance-40-prompt-20 { grid-area: guidance-40-prompt-20; }
+
+.guidance-50-prompt-20 { grid-area: guidance-50-prompt-20; }
+
+.imgTest{
+width: 10vw;
+}
+        </Style>
+        <h1 style="margin-top: 5vw;">Experiments on stable difusion img2img process</h1>
+        <p>Implementation Used: <a href="https://github.com/cmdr2/stable-diffusion-ui">stable-diffusion-ui</a>
+        <br>Prompt: imperial couple at a forest, Neoclassical, by John William Waterhouse<br>Original Image:</p>
+        <img src="./stable-difusion/base.jpg" style="display: block;margin-left: 35%;margin-right: 35%;width: 30%;">
+        <hr style="width: 70%;">
+        <h2 style="margin-top: 2vw;">Guidance Scale VS Prompt Strenght</h1>
+            <p>Seed: 92579 <br>Steps: 25<br>Width: 640 <br>Height: 640 </p>
+            <h3>Table of Results:</h2>
+        <div class="two_sided_table">
+            <div class="guidance-1-prompt-01">Guidence: 01 <br> Prompt Strength: 0.01<img src="./stable-difusion/guidance_01_prompt_01.jpeg" class="imgTest"></div>
+            <div class="guidance-50">Guidence: 50 <br> Prompt Strength: 0.01<img src="./stable-difusion/guidance_50_prompt_01.jpeg" class="imgTest"></div>
+            <div class="guidance-10">Guidence: 10 <br> Prompt Strength: 0.01<img src="./stable-difusion/guidance_10_prompt_01.jpeg" class="imgTest"></div>
+            <div class="guidance-20">Guidence: 20 <br> Prompt Strength: 0.01<img src="./stable-difusion/guidance_20_prompt_01.jpeg" class="imgTest"></div>
+            <div class="guidance-30">Guidence: 30 <br> Prompt Strength: 0.01<img src="./stable-difusion/guidance_30_prompt_01.jpeg" class="imgTest"></div>
+            <div class="guidance-40">Guidence: 40 <br> Prompt Strength: 0.01<img src="./stable-difusion/guidance_40_prompt_01.jpeg" class="imgTest"></div>
+            <div class="guidance-1-prompt-99"> Guidence: 01 <br> Prompt Strength: 0.99<img src="./stable-difusion/guidance_01_prompt_99.jpeg" class="imgTest"></div>
+            <div class="guidance-10-prompt-99">Guidence: 10 <br> Prompt Strength: 0.99<img src="./stable-difusion/guidance_10_prompt_99.jpeg" class="imgTest"></div>
+            <div class="guidance-20-prompt-99">Guidence: 20 <br> Prompt Strength: 0.99<img src="./stable-difusion/guidance_20_prompt_99.jpeg" class="imgTest"></div>
+            <div class="guidance-30-prompt-99">Guidence: 30 <br> Prompt Strength: 0.99<img src="./stable-difusion/guidance_30_prompt_99.jpeg" class="imgTest"></div>
+            <div class="guidance-40-prompt-99">Guidence: 40 <br> Prompt Strength: 0.99<img src="./stable-difusion/guidance_40_prompt_99.jpeg" class="imgTest"></div>
+            <div class="guidance-50-prompt-99">Guidence: 50 <br> Prompt Strength: 0.99<img src="./stable-difusion/guidance_50_prompt_99.jpeg" class="imgTest"></div>
+            <div class="guidance-1-prompt-20">Guidence: 01 <br> Prompt Strength: 0.20<img src="./stable-difusion/guidance_01_prompt_02.jpeg" class="imgTest"></div>
+            <div class="guidance-1-prompt-40">Guidence: 01 <br> Prompt Strength: 0.40<img src="./stable-difusion/guidance_01_prompt_04.jpeg" class="imgTest"></div>
+            <div class="guidance-1-prompt-60">Guidence: 01 <br> Prompt Strength: 0.60<img src="./stable-difusion/guidance_01_prompt_06.jpeg" class="imgTest"></div>
+            <div class="guidance-1-prompt-80">Guidence: 01 <br> Prompt Strength: 0.80<img src="./stable-difusion/guidance_01_prompt_08.jpeg" class="imgTest"></div>
+            <div class="guidance-10-prompt-80">Guidence: 10 <br> Prompt Strength: 0.80<img src="./stable-difusion/guidance_10_prompt_08.jpeg" class="imgTest"></div>
+            <div class="guidance-20-prompt-80">Guidence: 20 <br> Prompt Strength: 0.80<img src="./stable-difusion/guidance_20_prompt_08.jpeg" class="imgTest"></div>
+            <div class="guidance-30-prompt-80">Guidence: 30 <br> Prompt Strength: 0.80<img src="./stable-difusion/guidance_30_prompt_08.jpeg" class="imgTest"></div>
+            <div class="guidance-40-prompt-80">Guidence: 40 <br> Prompt Strength: 0.80<img src="./stable-difusion/guidance_40_prompt_08.jpeg" class="imgTest"></div>
+            <div class="guidance-50-prompt-80">Guidence: 50 <br> Prompt Strength: 0.80<img src="./stable-difusion/guidance_50_prompt_08.jpeg" class="imgTest"></div>
+            <div class="guidance-10-prompt-60">Guidence: 10 <br> Prompt Strength: 0.60 <img src="./stable-difusion/guidance_10_prompt_06.jpeg" class="imgTest"></div>
+            <div class="guidance-20-prompt-60">Guidence: 20 <br> Prompt Strength: 0.60<img src="./stable-difusion/guidance_20_prompt_06.jpeg" class="imgTest"></div>
+            <div class="guidance-30-prompt-60">Guidence: 30 <br> Prompt Strength: 0.60<img src="./stable-difusion/guidance_30_prompt_06.jpeg" class="imgTest"></div>
+            <div class="guidance-40-prompt-60">Guidence: 40 <br> Prompt Strength: 0.60<img src="./stable-difusion/guidance_40_prompt_06.jpeg" class="imgTest"></div>
+            <div class="guidance-50-prompt-60">Guidence: 50 <br> Prompt Strength: 0.60<img src="./stable-difusion/guidance_50_prompt_06.jpeg" class="imgTest"></div>
+            <div class="guidance-10-prompt-40">Guidence: 10 <br> Prompt Strength: 0.40<img src="./stable-difusion/guidance_10_prompt_04.jpeg" class="imgTest"></div>
+            <div class="guidance-20-prompt-40">Guidence: 20 <br> Prompt Strength: 0.40<img src="./stable-difusion/guidance_20_prompt_04.jpeg" class="imgTest"></div>
+            <div class="guidance-30-prompt-40">Guidence: 30 <br> Prompt Strength: 0.40<img src="./stable-difusion/guidance_30_prompt_04.jpeg" class="imgTest"></div>
+            <div class="guidance-40-prompt-40">Guidence: 40 <br> Prompt Strength: 0.40<img src="./stable-difusion/guidance_04_prompt_04.jpeg" class="imgTest"></div>
+            <div class="guidance-50-prompt-40">Guidence: 50 <br> Prompt Strength: 0.40<img src="./stable-difusion/guidance_50_prompt_04.jpeg" class="imgTest"></div>
+            <div class="guidance-10-prompt-20">Guidence: 10 <br> Prompt Strength: 0.20<img src="./stable-difusion/guidance_10_prompt_02.jpeg" class="imgTest"></div>
+            <div class="guidance-20-prompt-20">Guidence: 20 <br> Prompt Strength: 0.20<img src="./stable-difusion/guidance_02_prompt_20.jpeg" class="imgTest"></div>
+            <div class="guidance-30-prompt-20">Guidence: 30 <br> Prompt Strength: 0.20<img src="./stable-difusion/guidance_30_prompt_02.jpeg" class="imgTest"></div>
+            <div class="guidance-40-prompt-20">Guidence: 40 <br> Prompt Strength: 0.20<img src="./stable-difusion/guidance_40_prompt_02.jpeg" class="imgTest"></div>
+            <div class="guidance-50-prompt-20">Guidence: 50 <br> Prompt Strength: 0.20<img src="./stable-difusion/guidance_50_prompt_02.jpeg" class="imgTest"></div>
+          </div>
+          <br>
+          <hr style="width: 70%;">
+          <h2>img2img generation with the same parameters, but with random seeds</h2>
+          <p>Steps: 25<br>Width: 640 <br>Height: 640 <br>Guidence: 30 <br> Prompt Strength: 0.40</p>
+          <style>
+            .seeds_table {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0% 0%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "seed1 seed2 seed3 seed4 seed5 seed6";
+    width: 70%;
+    margin-left: 15%;
+}
+
+.seed1 { grid-area: seed1; }
+
+.seed6 { grid-area: seed6; }
+
+.seed2 { grid-area: seed2; }
+
+.seed3 { grid-area: seed3; }
+
+.seed4 { grid-area: seed4; }
+
+.seed5 { grid-area: seed5; }
+
+          </style>
+                      <h3>Table of Results:</h2>
+          <div class="seeds_table">
+            <div class="seed1">Seed: 8194121<br><img src="./stable-difusion/seed_8194121.jpeg" class="imgTest"></div>
+            <div class="seed6">Seed: 6763088<br><img src="./stable-difusion/seed_6763088.jpeg" class="imgTest"></div>
+            <div class="seed2">Seed: 3844367<br><img src="./stable-difusion/seed_3844367.jpeg" class="imgTest"></div>
+            <div class="seed3">Seed: 1351965<br><img src="./stable-difusion/seed_1351965.jpeg" class="imgTest"></div>
+            <div class="seed4">Seed: 1351966<br><img src="./stable-difusion/seed_1351966.jpeg" class="imgTest"></div>
+            <div class="seed5">Seed: 9530357<br><img src="./stable-difusion/seed_9530357.jpeg" class="imgTest"></div>
+          </div>
+          <br>
+          <br>
+          <p>Note the difference between seeds with only one digit difference:</p>
+          <style>
+            .comparison_table {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0% 0%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "left_side right_side";
+    width: 70%;
+    margin-left: 15%;
+}
+
+.left_side { grid-area: left_side; }
+
+.right_side { grid-area: right_side; }
+
+          </style>
+          <div class="comparison_table" style="border: transparent;">
+            <div class="left_side" style="border: transparent;">Seed: 1351965<br><img src="./stable-difusion/seed_1351965.jpeg" class="imgTest" style="width: 300px;"></div>
+            <div class="right_side" style="border: transparent;">Seed: 1351966<br><img src="./stable-difusion/seed_1351966.jpeg" class="imgTest" style="width: 300px;"></div>
+          </div>
+          <br>
+          <p>Now the two seeds further apart:</p>
+          <div class="comparison_table" style="border: transparent;">
+            <div class="left_side" style="border: transparent;">Seed: 1351965<br><img src="./stable-difusion/seed_1351965.jpeg" class="imgTest" style="width: 300px;"></div>
+            <div class="right_side" style="border: transparent;">Seed: 9530357<br><img src="./stable-difusion/seed_9530357.jpeg" class="imgTest" style="width: 300px;"></div>
+          </div>
+    </body>
+</html>
